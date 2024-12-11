@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -397,7 +401,7 @@ footer {
         cursor: pointer;
     }
     nav .container .nav-toggle {
-        height: 6 em;
+        height: 6em;
     }
 }
 
@@ -429,6 +433,8 @@ footer {
     }
     header {
         background: url(background3.jpg);
+        background-position: bottom;
+        background-size: cover;
     }
     header .content {
         flex-direction: column;
@@ -463,6 +469,8 @@ footer {
         flex-direction: column;
         width: 100%;
         background: url(background4.jpg);
+        background-position: bottom;
+        background-size: cover;
     }
     .form__title {
         text-align: center;
