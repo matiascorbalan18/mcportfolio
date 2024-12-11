@@ -150,6 +150,8 @@ nav .container .menu-btn {
 header {
     height: 100vh;
     background: url(background1.jpg);
+    background-position: bottom;
+    background-size: cover;
 }
 
 h2, h3, .footer-top {
@@ -233,6 +235,8 @@ header .content {
     container-name: form;
     container-type: inline-size;
     background: url(background2.jpg);
+    background-position: bottom;
+    background-size: cover;
 }
 
 .form__form {
