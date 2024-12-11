@@ -15,8 +15,12 @@ nav {
     position: relative;
 }
 
-header h1, h2, .projects h1 {
+h1, h2, .projects h1 {
     font-size: 2.5em;
+}
+
+header {
+    background-color: #000;
 }
 
 h1 {
@@ -44,37 +48,6 @@ a {transition: 0.4s;}
 a:hover {
     color: #c172e9;
     text-decoration: none;
-}
-
-.contenedor-btn {
-    display: flex;
-    text-decoration: none;
-}
-
-.btn {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    font-size: 16px;
-    color: #ffffff;
-    text-decoration: none;
-    gap: 10px;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(270deg, #b963e0, #8000bb);
-    cursor: pointer;
-    width: 3.4em;
-}
-
-.btn2 {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-    gap: 10px;
-    cursor: pointer;
 }
 
 p {
@@ -147,12 +120,54 @@ nav .container .menu-btn {
     display: none;
 }
 
-header {
+.content {
     height: 100vh;
     background: url(background1.jpg);
     background-position: bottom;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    container-name: content;
+    container-type: inline-size;
+    color: #fff;
+    padding: 0 10em;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
+
+.contenedor-btn {
+    display: flex;
+    text-decoration: none;
+    padding-top: 1em;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #b963e0, #8000bb);
+    cursor: pointer;
+    width: 3.4em;
+}
+
+.btn2 {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    gap: 10px;
+    cursor: pointer;
+}
+
 
 h2, h3, .footer-top {
     display: flex;
@@ -162,18 +177,6 @@ h2, h3, .footer-top {
 
 span {
     color: #8000bb
-}
-
-header .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    padding: 0 3em;
-    box-sizing: border-box;
-    height: 90%;
-    max-width: 1125px;
-    margin: 0 auto;
 }
 
 .content-profile {
@@ -435,20 +438,31 @@ footer {
     .logo {
         padding: 0 1em;
     }
-    header {
+    h1 {
+        font-size: 2em;
+    }
+    .content {
         background: url(background3.jpg);
         background-position: bottom;
         background-size: cover;
-    }
-    header .content {
         flex-direction: column;
+        padding-top: 4em;
+    }
+    .content-main {
+        width: 20em;    
     }
     .content-profile {
         flex-direction: column;
         margin: 0 auto;
+        margin-top: 1.5em;
     }
     .content img {
         flex-direction: column;
+        width: 90%;
+        height: 90%;
+    }
+    .contenedor-btn {
+        padding-top: 0.5em;
     }
     .row {
         grid-template-columns: 1fr;
