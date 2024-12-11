@@ -458,8 +458,6 @@ footer {
     }
     .content img {
         flex-direction: column;
-        width: 90%;
-        height: 90%;
     }
     .contenedor-btn {
         padding-top: 0.5em;
