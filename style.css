@@ -11,8 +11,53 @@ body {
 }
 
 nav {
-    z-index: 99;
-    position: relative;
+    background: #000000;
+    height: 50px;
+    width: 100%;
+}
+
+.logo {
+    width: 6em;
+    line-height: 80px;
+    padding: 0 9.6em;
+    margin-top: 10px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 70px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 0px;
+    margin: 0 5px;
+    color: white;
+}
+
+nav ul li a {
+    color: #b963e0;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: #1b181d;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
 }
 
 h1, h2, .projects h1 {
@@ -55,40 +100,28 @@ p {
     color: #ccc;
 }
 
-nav a, footer a {
+footer a {
     text-decoration: none;
 }
 
-nav .container {
-    max-width: 1150px;
-    padding: 1em 2em;
-    margin: 0 auto;
-}
-
-nav .container > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav .menu, nav .brand {
+nav .brand {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav ul, footer ul {
+footer ul {
     list-style-type: none;
     padding: 0;
     display: inline-block;
 }
 
-nav ul li, footer ul li {
+footer ul li {
     display: inline-block;
     margin: 0 0.5em;
 }
 
-nav ul a, footer ul a {
+footer ul a {
     font-size: 0.8em;
     text-transform: uppercase;
 }
@@ -376,41 +409,66 @@ footer {
     margin-left: 0;
 }
 
-@media screen and (max-width: 1000px) {
-    nav .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    nav .container > div {
-        grid-template-columns: 1fr;
-    }
-    nav .menu {
-        flex-direction: column;
-        align-items: flex-start;
-        height: 0;
-        overflow: hidden;
-        transition: 0.7s;
-    }
-    nav ul:nth-child(1) li {
-        display: block;
-        margin: 0.1em 0;
-    }
-    nav ul:nth-child(1) li:nth-child(1) {
-        margin-top: 0.1em;
-    }
-    nav ul:nth-child(2) li:nth-child(1) {
-        margin-left: 0;
-    }
-    nav .container .menu-btn {
-        display: inline-block;
-        font-size: 1.4em;
-        cursor: pointer;
-    }
-    nav .container .nav-toggle {
-        height: 7em;
+@media screen and (max-width: 952px) {
+    nav ul li a {
+        font-size: 14px;
     }
 }
+
+@media screen and (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0d0c0e;
+        top: 50px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    a:hover, a.active {
+        background: none;
+        color: #8000bb;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    .content {
+        background: url(background3.jpg);
+        background-position: bottom;
+        background-size: cover;
+        flex-direction: column;
+        padding-top: 4em;
+        height: 100vh;
+    }
+    .content-main {
+        width: 20em;    
+    }
+    .content-profile {
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 1.5em;
+    }
+    .content img {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor-btn {
+        padding-top: 0.5em;
+    }
+}
+
 
 @media screen and (max-height: 400px) {
     header {
@@ -435,34 +493,10 @@ footer {
 }
 
 @media screen and (max-width: 680px) {
-    .logo {
-        padding: 0 1em;
-    }
     h1 {
         font-size: 2em;
     }
-    .content {
-        background: url(background3.jpg);
-        background-position: bottom;
-        background-size: cover;
-        flex-direction: column;
-        padding-top: 4em;
-    }
-    .content-main {
-        width: 20em;    
-    }
-    .content-profile {
-        flex-direction: column;
-        margin: 0 auto;
-        margin-top: 1.5em;
-    }
-    .content img {
-        flex-direction: column;
-        align-items: center;
-    }
-    .contenedor-btn {
-        padding-top: 0.5em;
-    }
+
     .row {
         grid-template-columns: 1fr;
         justify-items: center;
