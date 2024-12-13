@@ -59,7 +59,11 @@ a.active, a:hover {
     display: none;
 }
 
-h1, h2, .projects h1 {
+h1 {
+    font-size: 3em;
+}
+
+h2 {
     font-size: 2.5em;
 }
 
@@ -128,7 +132,7 @@ footer ul a {
 .logo {
     width: 6em;
     display: inline-block;
-    padding: 0 3.5em;
+    padding: 0 9.5em;
 }
 
 .nav-btn {
@@ -166,6 +170,7 @@ nav .container .menu-btn {
     padding: 0 10em;
     box-sizing: border-box;
     margin: 0 auto;
+    width: 100%;
 }
 
 .contenedor-btn {
@@ -272,6 +277,7 @@ span {
     background: url(background2.jpg);
     background-position: bottom;
     background-size: cover;
+    width: 100%;
 }
 
 .form__form {
@@ -470,15 +476,20 @@ footer {
     h1 {
         font-size: 2em;
     }
+    .logo {
+        width: 6em;
+        display: inline-block;
+        padding: 0 3.5em;
+    }
     .checkbtn {
         display: block;
     }
     ul {
         position: fixed;
-        width: 420px;
+        width: 365px;
         height: 100vh;
         background: #0d0c0e;
-        top: 50px;
+        top: 0;
         text-align: center;
         justify-content: center;
         margin: 0;
