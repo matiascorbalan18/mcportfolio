@@ -45,20 +45,6 @@ a.active, a:hover {
     transition: .5s;
 }
 
-.checkbtn {
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 50px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#check {
-    display: none;
-}
-
 h1 {
     font-size: 3em;
 }
@@ -480,36 +466,67 @@ footer {
         width: 6em;
         display: inline-block;
         padding: 0 3.5em;
-    }
-    .checkbtn {
-        display: block;
-    }
-    ul {
-        position: fixed;
-        width: 365px;
-        height: 100vh;
-        background: #0d0c0e;
-        top: 0;
-        text-align: center;
-        justify-content: center;
-        margin: 0;
-        left: -100%;
-        transition: all .5s;
         z-index: 99;
     }
-    nav ul li {
-        display: block;
-        margin: 50px 0;
+    .off-screen-menu {
+        background-color: #161618;
+        height: 100vh;
+        width: 100%;
+        max-width: 430px;
+        position: fixed;
+        top: 0;
+        right: -430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 18px;
+        transition: .3s ease;
+        text-transform: uppercase;
     }
-    nav ul li a {
-        font-size: 14px;
+    .off-screen-menu.active {
+        right: 0;
     }
-    a:hover, a.active {
-        background: none;
-        color: #c172e9;
+    nav {
+        padding: 3.5em;
+        display: flex;
+        background-color: #000000;
     }
-    #check:checked ~ ul {
-        left: 0;
+    .ham-menu {
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+    }
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: #8000bb;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+    .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+    .ham-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%,-50%) rotate(-45deg);
     }
     .content {
         background: url(background3.jpg);
