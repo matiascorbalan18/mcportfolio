@@ -10,22 +10,29 @@ body {
     color: #fff;
 }
 
+/* --------------- HEADER --------------- */
+
+header {
+    background-color: #000;
+}
+
+.logo {
+    width: 7em;
+    line-height: 80px;
+    padding: 0 9.7em;
+    margin-top: 10px;
+}
+
 nav {
     background: #000000;
     height: 50px;
     width: 100%;
+    display: flex;
 }
 
-.logo {
-    width: 6em;
-    line-height: 80px;
-    padding: 0 10em;
-    margin-top: 10px;
-}
-
-nav ul {
-    float: right;
-    margin-right: 70px;
+.screen-menu {
+    margin-left: auto;
+    padding: 0 9.7em;
 }
 
 nav ul li {
@@ -45,16 +52,14 @@ a.active, a:hover {
     transition: .5s;
 }
 
+/* --------------- CONTENT --------------- */
+
 h1 {
     font-size: 3em;
 }
 
 h2 {
     font-size: 2.5em;
-}
-
-header {
-    background-color: #000;
 }
 
 h1 {
@@ -87,59 +92,6 @@ a:hover {
 p {
     font-size: 0.9;
     color: #ccc;
-}
-
-footer a {
-    text-decoration: none;
-}
-
-nav .brand {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer ul {
-    list-style-type: none;
-    padding: 0;
-    display: inline-block;
-}
-
-footer ul li {
-    display: inline-block;
-    margin: 0 0.5em;
-}
-
-footer ul a {
-    font-size: 0.8em;
-    text-transform: uppercase;
-}
-
-.logo {
-    width: 6em;
-    display: inline-block;
-    padding: 0 9.5em;
-}
-
-.nav-btn {
-    background: rgba(255, 255, 255, 0.3);
-    color: #fff;
-    width: 2.8em;
-    height: 2.8em;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 1em;
-}
-
-.nav-btn:hover {
-    background: rgba(255, 255, 255, 0.6);
-}
-
-nav .container .menu-btn {
-    display: none;
 }
 
 .content {
@@ -218,6 +170,8 @@ span {
     border: 10px #8000bb;
 }
 
+/* --------------- PROJECTS --------------- */
+
 .row {
     display: grid;
     justify-items: start;
@@ -252,6 +206,8 @@ span {
     width: 5.4em;
     margin-top: 30px;
 }
+
+/* --------------- CONTACT --------------- */
 
 .form {
     height: 100vh;
@@ -319,7 +275,6 @@ span {
     margin-bottom: 5px;
 }
 
-
 .form__form button {
     display: flex;
     align-items: center;
@@ -335,8 +290,30 @@ span {
     cursor: pointer;
 }
 
+/* --------------- FOOTER --------------- */
+
 footer {
     background: #161618;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+footer ul a {
+    font-size: 0.8em;
+    text-transform: uppercase;
 }
 
 .footer-top {
@@ -344,7 +321,7 @@ footer {
 }
 
 .footer-top .logo {
-    width: 6em;
+    width: 7em;
 }
 
 .footer-bottom {
@@ -399,6 +376,9 @@ footer {
 .footer ul li:nth-child(1) {
     margin-left: 0;
 }
+
+/* --------------- QUERIES --------------- */
+
 
 @media screen and (max-width: 952px) {
     nav ul li a {
@@ -463,14 +443,15 @@ footer {
         font-size: 2em;
     }
     .logo {
-        width: 9em;
+        width: 8em;
         display: inline-block;
         padding: 0 0.5em;
     }
-    .off-screen-menu {
+    .screen-menu {
         background-color: #0d0c0e;
         height: 100vh;
-        max-width: 450px;
+        width: 100px;
+        max-width: 100px;
         position: fixed;
         top: 0;
         right: -450px;
@@ -481,28 +462,34 @@ footer {
         text-align: center;
         font-size: 16px;
         transition: .3s ease;
-        text-transform: uppercase;
-        padding-right: 2em;
+        z-index: 5;
     }
-    ul li {
-        margin-bottom: 10px;
-        list-style-type: none;
-    }
-    .off-screen-menu.active {
+    .screen-menu.active {
         right: 0;
     }
+
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3em;
+        text-transform: uppercase;
+        list-style-type: none;
+    }
+
     nav {
         height: 50px;
         width: 100%;
         display: flex;
         background-color: #000000;
     }
+
     .ham-menu {
         cursor: pointer;
         height: 50px;
         width: 50px;
         margin-left: auto;
         position: relative;
+        z-index: 99;
     }
     .ham-menu span {
         height: 5px;
