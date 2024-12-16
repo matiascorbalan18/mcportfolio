@@ -451,6 +451,7 @@ footer ul a {
         width: 8em;
         display: inline-block;
         padding: 0 0.5em;
+        z-index: 99;
     }
     .screen-menu {
         background-color: #000000;
@@ -495,6 +496,7 @@ footer ul a {
         display: flex;
         background-color: #000000;
         padding-bottom: 8px;
+        z-index: 99;
     }
 
     .ham-menu {
