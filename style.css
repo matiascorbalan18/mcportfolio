@@ -241,7 +241,7 @@ span {
     margin: 5px;
 }
 
-.form__input-container :is(input,textarea) {
+.form__input-container :is(input, .text) {
     width: 95%;
     padding: 9px;
     font-size: 16px;
@@ -252,12 +252,13 @@ span {
     background: #1b181d;
 }
 
-.form__input-container textarea {
+.form__input-container .text {
     resize: none;
     min-height: 120px;
     font-family: inherit;
     border-radius: 20px;
     background: #1b181d;
+    text-align: justify;
 }
 
 .form__input:focus {
@@ -275,7 +276,7 @@ span {
     margin-bottom: 5px;
 }
 
-.form__form button {
+.form__form .button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -503,7 +504,7 @@ footer ul a {
         cursor: pointer;
         height: 50px;
         width: 50px;
-        right: 0;
+        right: 0.8em;
         position: fixed;
         z-index: 99;
     }

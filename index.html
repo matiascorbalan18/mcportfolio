@@ -20,13 +20,10 @@
             <div class="screen-menu">
                 <ul>
                     <li>
-                        <a href="#intro">About</a>
-                    </li>
-                    <li>
                         <a href="#posts">Projects</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#form">Contact</a>
                     </li>
                     <li>
                         <a class="mail-nav" target="_blank" href="mailto:matt.corbalan@gmail.com"><i class="fa-regular fa-envelope"></i> matt.corbalan@gmail.com</a>
@@ -48,7 +45,7 @@
                     <a href="#posts">Projects</a>
                 </div>
                 <div class="btn2">
-                    <a href="#contact">Contact Me</a>
+                    <a href="#form">Contact Me</a>
                 </div>
             </div>
         </div>
@@ -126,31 +123,36 @@
         </div>
     </section>
 
-    <section class="form" id="contact">
+    <section class="form" id="form">
         <h2 class="form__title">Let´s talk about your project!</h2>
         <form class="form__form">
             <div class="form__input-container">
                 <label>Name
-                    <input type="text" placeholder="Your name" required>
+                    <input type="text" placeholder="Your name" name="name" required>
                 </label>
             </div>
             <div class="form__input-container">
                 <label>Surname
-                    <input type="text" placeholder="Your surname" required>
+                    <input type="text" placeholder="Your surname" name="surname" required>
                 </label>
             </div>
             <div class="form__input-container">
                 <label>Your email address
-                    <input type="email" placeholder="yourmail@example.com" required>
+                    <input type="email" placeholder="yourmail@example.com" name="email" required>
                 </label>
             </div>
             <div class="form__input-container">
                 <label>Message
-                    <textarea placeholder="Your message..."></textarea required>
+                    <input type="text" class="text" placeholder="Your message..." name="message" required>
                 </label>
             </div>
-            <button type="submit">Send <i class="fa-solid fa-arrow-right"></i></button>
+            <input type="submit" class="button" id="button" value="Send" >
         </form>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script type="text/javascript">
+            emailjs.init('rVWu_orV5OPiOfY8T')
+        </script>
     </section>
 
     <footer>
@@ -174,13 +176,10 @@
             <div class="footer">
                 <ul>
                     <li>
-                        <a href="#intro">About</a>
-                    </li>
-                    <li>
                         <a href="#posts">Projects</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#form">Contact</a>
                     </li>
                 </ul>
                 <div class="footer-name">
@@ -190,5 +189,27 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script>
+        const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_4wn2zd4';
+
+   emailjs.sendForm(serviceID, templateID, 'form')
+    .then(() => {
+      btn.value = 'Send';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send';
+      alert(JSON.stringify(err));
+    });
+});
+    </script>
 </body>
 </html>
