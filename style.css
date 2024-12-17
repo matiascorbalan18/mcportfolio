@@ -241,7 +241,7 @@ span {
     margin: 5px;
 }
 
-.form__input-container :is(input, .text) {
+.form__input-container :is(input, textarea) {
     width: 95%;
     padding: 9px;
     font-size: 16px;
@@ -252,13 +252,12 @@ span {
     background: #1b181d;
 }
 
-.form__input-container .text {
+.form__input-container textarea {
     resize: none;
-    min-height: 120px;
     font-family: inherit;
     border-radius: 20px;
     background: #1b181d;
-    text-align: justify;
+    text-align: start;
 }
 
 .form__input:focus {
@@ -448,6 +447,9 @@ footer ul a {
     h1 {
         font-size: 2em;
     }
+    section {
+        scroll-margin-top:55px;
+    }
     .logo {
         width: 8em;
         display: inline-block;
@@ -541,7 +543,7 @@ footer ul a {
         background-position: bottom;
         background-size: cover;
         flex-direction: column;
-        height: 100vh;
+        height: 140vh;
         width: 100%;
         z-index: -1;
     }
@@ -555,7 +557,6 @@ footer ul a {
         flex-direction: column;
         justify-content: center;
         margin: 0;
-        margin-top: 2em;
     }
     .content img {
         flex-direction: column;
@@ -570,6 +571,7 @@ footer ul a {
         text-align: center;
         padding: 2em 1.5em;
         margin: 0;
+        margin-top: 20px;
     }
     .row-btn {
         justify-content: center;
@@ -596,6 +598,7 @@ footer ul a {
         font-size: 27px;
         margin: 0;
         padding: 0 0 0.8em;
+        margin-top: 20px;
     }
     .form__form {
         width: 20em;

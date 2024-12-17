@@ -15,3 +15,4 @@ menuLinks.forEach(link => {
         screenMenu.classList.remove("active");
     });
 });
+
