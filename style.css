@@ -30,10 +30,14 @@ nav {
     display: flex;
 }
 
-.screen-menu {
+.nav-menu {
+    display: flex;
     margin-left: auto;
+    margin-right: 9.7em;
+}
+
+.screen-menu {
     padding: 0px;
-    margin-right: 0;
 }
 
 nav ul li {
