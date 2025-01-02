@@ -33,7 +33,7 @@ nav {
 .screen-menu {
     margin-left: auto;
     padding: 0px;
-    margin-right: 9.7em;
+    margin-right: 0;
 }
 
 nav ul li {
@@ -406,17 +406,18 @@ footer ul a {
     .screen-menu {
         background-color: #000000;
         height: 100vh;
-        width: 280px;
-        max-width: 280px;
+        width: 300px;
+        max-width: 300px;
         padding: 0;
         position: fixed;
         top: 0;
-        right: -280px;
+        right: -300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin: 0 auto;
         font-size: 16px;
         transition: .3s ease;
         z-index: 5;
