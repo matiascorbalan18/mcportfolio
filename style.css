@@ -394,7 +394,7 @@ footer ul a {
 
 /* --------------- QUERIES --------------- */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     h1 {
         font-size: 2em;
     }
